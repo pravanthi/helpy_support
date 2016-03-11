@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5.2'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+# gem 'pg'
 gem 'pg_search'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -89,7 +89,7 @@ gem 'rails-timeago'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'mysql2', '~> 0.3.18'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -149,3 +149,5 @@ group :production do
 end
 
 ruby "2.2.1"
+gem 'execjs'
+gem 'therubyracer'
