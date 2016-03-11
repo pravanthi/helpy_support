@@ -8,17 +8,17 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
-development:
-  <<: *default
-  database: helpy_development
-  port: 5432
-  host: localhost
-  username: pguser
-  password: rank123
+# development:
+#   <<: *default
+#   database: helpy_development
+#   port: 5432
+#   host: localhost
+#   username: pguser
+#   password: rank123
 
-test:
-  <<: *default
-  database: helpy_test
+# test:
+#   <<: *default
+#   database: helpy_test
 
 # production:
 #   <<: *default
