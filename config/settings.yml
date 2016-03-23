@@ -2,7 +2,7 @@
 tickets: true
 forums: true
 knowledgebase: true
-
+user_details: true
 # Site Settings
 parent_site: /parent-redirect.html # This tells Helpy how to provide a link back to your main site
 parent_company: Main Site # This is the parent company your helpdesk is providing support for

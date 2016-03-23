@@ -78,7 +78,7 @@ Rails.application.routes.draw do
     get '/user/:id' => 'admin#user_profile', as: :user_profile
     get '/topic_search' => 'admin#topic_search', as: :admin_search
     get '/user_search' => 'admin#user_search', as: :user_search
-
+    get '/user_details' => 'admin#user_details', as: :user_details
   end
 
 

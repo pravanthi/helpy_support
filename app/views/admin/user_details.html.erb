@@ -1,0 +1,15 @@
+<table id="topics" class="forum table-hover">
+  <col width="40%">
+  <col width="20%">
+  <col width="40%">
+  <tr>
+    <th><%= %></th>
+    <th><%= %></th>
+    <th><%= %></th>
+  </tr>
+  <%= render :partial => 'admin/user_information', :collection => @user_details %>
+</table>
+
+<% if @user_details.count == 0 %>
+  <div class="text-center verticalness"><%= t(:no_users_found) %></div>
+<% end %>

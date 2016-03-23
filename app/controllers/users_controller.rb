@@ -53,11 +53,18 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @page_title = t(:my_profile)
-    @title_tag = "#{Settings.site_name} Support: My Profile"
-    add_breadcrumb @page_title, categories_path
+    if params[:id].to_i.present?
+      user=User.find(params[:id])
+      @page_title=user.name
+      add_breadcrumb @page_title, categories_path
+      @user=user
+    else
+      @page_title = t(:my_profile)
+      @title_tag = "#{Settings.site_name} Support: My Profile"
+      add_breadcrumb @page_title, categories_path
 
-    @user = current_user
+      @user = current_user
+    end
   end
 
   def update
@@ -94,6 +101,10 @@ class UsersController < ApplicationController
     session[:client_id] = params[:client_id]
     render nothing: true
 
+  end
+
+  def destroy
+    puts"<<<<<<<<<<<<<<<"
   end
 
   private

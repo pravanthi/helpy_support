@@ -1,0 +1,12 @@
+<tr class="topic border-bottom">
+	<td>
+  	<span style="padding-right: 10px;"><%= link_to avatar_image(user_information, size=40), user_profile_path(user_information.id) %></span>
+    <strong><%= link_to "##{user_information.id}- #{user_information.name.capitalize}", user_profile_path(user_information.id) -%></strong>
+  </td>
+  <td class="last-active less-important text-center">
+    <div style="align:center;"><%= user_information.email %></div>
+  </td>
+  <td class="last-active less-important text-right">
+  	<%= link_to t(:edit, default: 'Edit'), edit_user_path(user_information.id), :id=> user_information.id%>
+  </td>
+</tr>

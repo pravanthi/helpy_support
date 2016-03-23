@@ -102,7 +102,7 @@ en:
   communities: Communities
   app_store: App Store
   search: Search
-
+  users: Users
   # Admin main/statuses
   support_pipeline: Support Pipeline
   new: New
@@ -189,7 +189,8 @@ en:
   # Communities
   new_community: Create New Community
   create_new_community: Create New Community
-
+  #user_details
+  no_users_found: "You have not created any Users yet"
   # Mail messages
   hello: "Hello %{user_name}"
   new_user: "Thank you for contacting us.  Your message has been received by our support team and we will be in touch with you shortly with a response."

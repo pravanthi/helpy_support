@@ -402,6 +402,10 @@ class AdminController < ApplicationController
 
   end
 
+  def user_details
+    @user_details=User.all
+  end
+
   private
 
   def pipeline
