@@ -103,10 +103,6 @@ class UsersController < ApplicationController
 
   end
 
-  def destroy
-    puts"<<<<<<<<<<<<<<<"
-  end
-
   private
 
   def user_params
