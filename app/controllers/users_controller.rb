@@ -52,6 +52,21 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def destroy
+    if current_user.admin?
+      @user=User.find(params[:id])
+      topic=@user.topics
+      topic.each do |t|
+        t.destroy
+      end
+      @user.destroy
+      respond_to do |format|
+        format.html { redirect_to(user_details_path) }
+        format.js
+      end
+    end
+  end
+
   def edit
     if params[:id].to_i.present?
       user=User.find(params[:id])

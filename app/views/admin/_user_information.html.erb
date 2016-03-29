@@ -7,6 +7,7 @@
     <div style="align:center;"><%= user_information.email %></div>
   </td>
   <td class="last-active less-important text-right">
-  	<%= link_to t(:edit, default: 'Edit'), edit_user_path(user_information.id), :id=> user_information.id%>
+  	<%= link_to t(:edit, default: 'Edit'), edit_user_path(user_information.id), :id=> user_information.id%>|
+    <%= link_to t(:delete, default: 'Remove'), user_path(user_information.id), :id=> user_information.id, :method=> :delete, :data => {confirm: "Are u sure to delete this user #{user_information.name}"} %>
   </td>
 </tr>
